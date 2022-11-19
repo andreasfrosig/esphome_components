@@ -44,14 +44,6 @@ switchs:
     name: "Genvex timer on/off"
     id: genvex_timer_onoff
     address: 4
-
-binary_sensor:
-  - platform: modbus_controller
-    modbus_controller_id: genvex_modbus_controller
-    name: "Genvex timer onoff"
-    id: genvex_timer_onoff_1
-    register_type: holding
-    address: 4
     
 sensor:
   - platform: template
@@ -384,6 +376,13 @@ binary_sensor:
     id: genvex_bypass_close
     register_type: read
     address: 13
+
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex timer onoff"
+    id: genvex_timer_onoff_1
+    register_type: holding
+    address: 4
 
   - platform: status
     name: "Genvex Controller Status"
