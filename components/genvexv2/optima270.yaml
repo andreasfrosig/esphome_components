@@ -12,7 +12,7 @@ select:
   - platform: genvexv2
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex speed mode"
-    id: genvex_speed_mode    
+    id: genvex_speed_mode
     address: 24
     options:
       - "Off"
@@ -20,24 +20,38 @@ select:
       - "2"
       - "3"
       - "4"
+
+  - platform: genvexv2
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex timer hours"
+    id: genvex_timer_hours
+    address: 17
+    options:
+      - "Off"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
       
-#  - platform: genvexv2
-#    modbus_controller_id: genvex_modbus_controller
-#    name: "Genvex timer"
-#    id: genvex_timer    
-#    address: 106
-#    options:
-#      - "Off"
-#      - "1"
-#      - "2"
-#      - "3"
-#      - "4"
-#      - "5"
-#      - "6"
-#      - "7"
-#      - "8"
-#      - "9"
-      
+switchs:
+  - platform: genvexv2
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex timer on/off"
+    id: genvex_timer_onoff
+    address: 4
+
+binary_sensor:
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex timer onoff"
+    id: genvex_timer_onoff_1
+    register_type: holding
+    address: 4
     
 sensor:
   - platform: template
@@ -123,13 +137,13 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
-    name: "Genvex Messured Humidity"
-    id: genvex_messured_humidity
+    name: "Genvex Measured Humidity"
+    id: genvex_measured_humidity
     unit_of_measurement: '%'
     accuracy_decimals: 1
     device_class: humidity
     register_type: read
-    address: 43
+    address: 26
     #filters:
     #  - multiply: 0.01
     on_value: 
@@ -181,7 +195,7 @@ sensor:
     unit_of_measurement: "%"
     value_type: U_WORD
     register_type: read
-    address: 34        
+    address: 34
 
 text_sensor:
   - platform: template
@@ -359,10 +373,17 @@ number:
 binary_sensor:
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
-    name: "Genvex bypass onoff"
-    id: genvex_bypass_on_off
+    name: "Genvex bypass open"
+    id: genvex_bypass_open
     register_type: read
-    address: 29        
+    address: 12
+
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex bypass close"
+    id: genvex_bypass_close
+    register_type: read
+    address: 13
 
   - platform: status
     name: "Genvex Controller Status"
