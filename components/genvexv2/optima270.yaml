@@ -37,13 +37,6 @@ select:
       - "7"
       - "8"
       - "9"
-      
-switches:
-  - platform: genvexv2
-    modbus_controller_id: genvex_modbus_controller
-    name: "Genvex timer on/off"
-    id: genvex_timer_onoff
-    address: 4
     
 sensor:
   - platform: template
