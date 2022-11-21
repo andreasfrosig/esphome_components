@@ -137,23 +137,23 @@ sensor:
                                           (x < 65) ? "Perfect" : 
                                           "Too Humid");
 
-#  - platform: modbus_controller
-#    modbus_controller_id: genvex_modbus_controller
-#    name: "Genvex inlet fan"
-#    id: genvex_inlet_fan
-#    unit_of_measurement: "%"
-#    value_type: U_WORD
-#    register_type: read
-#    address: 102
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex inlet fan"
+    id: genvex_inlet_fan
+    unit_of_measurement: "%"
+    value_type: U_WORD
+    register_type: read
+    address: 18
 
-#  - platform: modbus_controller
-#    modbus_controller_id: genvex_modbus_controller
-#    name: "Genvex extract fan"
-#    id: genvex_extract_fan
-#    unit_of_measurement: "%"
-#    value_type: U_WORD
-#    register_type: read
-#    address: 103
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex extract fan"
+    id: genvex_extract_fan
+    unit_of_measurement: "%"
+    value_type: U_WORD
+    register_type: read
+    address: 19
 
 #  - platform: modbus_controller
 #    modbus_controller_id: genvex_modbus_controller
@@ -173,14 +173,14 @@ sensor:
 #    register_type: read
 #    address: 105    
     
-  - platform: modbus_controller
-    modbus_controller_id: genvex_modbus_controller
-    name: "Genvex humidity fan control"
-    id: genvex_humidity_fan_control
-    unit_of_measurement: "%"
-    value_type: U_WORD
-    register_type: read
-    address: 34
+#  - platform: modbus_controller
+#    modbus_controller_id: genvex_modbus_controller
+#    name: "Genvex humidity fan control"
+#    id: genvex_humidity_fan_control
+#    unit_of_measurement: "%"
+#    value_type: U_WORD
+#    register_type: read
+#    address: 34
 
 text_sensor:
   - platform: template
