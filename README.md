@@ -1,4 +1,4 @@
-## WORK IN PROGRESS! Only the most basic values is extracted from the unit.
+## This is a work in progress! Only the most basic values are extracted from the unit.
 
 Original work by Heine K. Madsen (https://github.com/heinekmadsen/esphome_components)
 
