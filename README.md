@@ -26,7 +26,7 @@ modbus:
  
 modbus_controller:
   id: genvex_modbus_controller
-  address: 1
+  address: 20
   modbus_id: genvex_modbus
   update_interval: 60s
   command_throttle: 10ms
