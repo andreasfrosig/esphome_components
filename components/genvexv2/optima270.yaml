@@ -8,18 +8,21 @@ external_components:
 
 genvexv2:
 
+#
+# Select sensors
+#
 select:
-  - platform: genvexv2
-    modbus_controller_id: genvex_modbus_controller
-    name: "Genvex speed mode"
-    id: genvex_speed_mode
-    address: 24
-    options:
-      - "Off"
-      - "1"
-      - "2"
-      - "3"
-      - "4"
+#  - platform: genvexv2
+#    modbus_controller_id: genvex_modbus_controller
+#    name: "Genvex speed mode"
+#    id: genvex_speed_mode
+#    address: 24
+#    options:
+#      - "Off"
+#      - "1"
+#      - "2"
+#      - "3"
+#      - "4"
 
   - platform: genvexv2
     modbus_controller_id: genvex_modbus_controller
@@ -37,8 +40,15 @@ select:
       - "7"
       - "8"
       - "9"
-    
+
+switch:
+  - platform
+
+#
+# Sensors
+# 
 sensor:
+# Virkningsgrad
   - platform: template
     name: "Genvex Virkningsgrad"
     lambda: |-
@@ -50,6 +60,7 @@ sensor:
     update_interval: 60s
     state_class: measurement
     
+  # Tilluft temperatur (T1)
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex temp t1"
@@ -63,7 +74,8 @@ sensor:
     lambda: |-
       ESP_LOGD("T1", "Processing T1 using lambda");
       return ((x - 300) / 10);
-      
+    
+  # Udeluft temperatur (T3)
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex temp t3"
@@ -77,7 +89,8 @@ sensor:
     lambda: |-
       ESP_LOGD("T3", "Processing T3 using lambda");
       return ((x - 300) / 10);
-      
+  
+  # Afkastluft (T4)
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex temp t4"
@@ -91,7 +104,8 @@ sensor:
     lambda: |-
       ESP_LOGD("T4", "Processing T4 using lambda");
       return ((x - 300) / 10);
-      
+    
+  # Fraluft (T7)
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex temp t7"
@@ -120,6 +134,7 @@ sensor:
 #      ESP_LOGD("T2_Panel", "Processing T2 panel using lambda");
 #      return ((x - 300) / 10);
 
+  # Luftfugtighed
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex Measured Humidity"
@@ -137,6 +152,7 @@ sensor:
                                           (x < 65) ? "Perfect" : 
                                           "Too Humid");
 
+  # Ventilator tilluft %
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex inlet fan"
@@ -149,6 +165,17 @@ sensor:
     lambda: |-
       return (x / 100);
 
+  # Ventilator tilluft RPM
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex inlet fan RPM"
+    id: genvex_inlet_fan_rpm
+    accuracy_decimals: 0
+    value_type: U_WORD
+    register_type: read
+    address: 35
+
+  # Ventilator fraluft %
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex extract fan"
@@ -160,6 +187,46 @@ sensor:
     address: 19
     lambda: |-
       return (x / 100);
+  
+  # Ventilator fraluft RPM
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex extract fan RPM"
+    id: genvex_extract_fan_rpm
+    accuracy_decimals: 0
+    value_type: U_WORD
+    register_type: read
+    address: 35
+
+  # Forvarme PWM
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex preheat PWM"
+    id: genvex_preheat_pwm
+    accuracy_decimals: 2
+    value_type: U_WORD
+    register_type: read
+    address: 41
+
+  # Tilluft m3/h
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex supply air"
+    id: genvex_supply_air
+    accuracy_decimals: 0
+    value_type: U_WORD
+    register_type: read
+    address: 27
+
+  # Fraluft m3/h
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex extract air"
+    id: genvex_extract_air
+    accuracy_decimals: 0
+    value_type: U_WORD
+    register_type: read
+    address: 28
 
 #  - platform: modbus_controller
 #    modbus_controller_id: genvex_modbus_controller
@@ -188,7 +255,11 @@ sensor:
 #    register_type: read
 #    address: 34
 
+#
+# Text sensors
+#
 text_sensor:
+  # Luftkvalitet
   - platform: template
     name: "Genvex Air Quality Index Humidity (AQI)"
     id: aqi_humidity
@@ -337,7 +408,11 @@ text_sensor:
 #      }
 #      return mode_str;
 
+#
+# Number sensors
+#
 number:
+  # Valgt temperatur
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex target temp"
@@ -351,7 +426,8 @@ number:
       ESP_LOGD("main","Processing new target temp");
       uint16_t new_temp = x * 10 - 100;
       return new_temp;
-      
+  
+  # Ventilationshastighed
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex Ventilation speed"
@@ -361,6 +437,9 @@ number:
     step: 1.0
     address: 7
 
+#
+# Binary sensors
+#
 binary_sensor:
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
@@ -383,9 +462,26 @@ binary_sensor:
     register_type: holding
     address: 4
 
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex inlet frostprotection"
+    id: genvex_inlet_frostprotection
+    register_type: read
+    address: 39
+
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex reheating"
+    id: genvex_reheating
+    register_type: holding
+    address: 3
+
   - platform: status
     name: "Genvex Controller Status"
 
+#
+# Climate sensor
+#
 climate:
   - platform: genvexv2
     name: Genvex
