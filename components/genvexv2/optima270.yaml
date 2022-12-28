@@ -193,7 +193,7 @@ sensor:
     accuracy_decimals: 0
     value_type: U_WORD
     register_type: read
-    address: 35
+    address: 36
 
   # Forvarme PWM
   - platform: modbus_controller
