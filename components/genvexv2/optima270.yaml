@@ -518,7 +518,7 @@ number:
     value_type: U_WORD
     address: 15
 
-    - platform: modbus_controller
+  - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex Step 4 Extract Speed"
     id: genvex_step3_extract_speed
