@@ -154,7 +154,7 @@ sensor:
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex inlet fan"
     id: genvex_inlet_fan
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     accuracy_decimals: 0
     value_type: U_WORD
     register_type: read
@@ -177,7 +177,7 @@ sensor:
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex extract fan"
     id: genvex_extract_fan
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     accuracy_decimals: 0
     value_type: U_WORD
     register_type: read
@@ -229,7 +229,7 @@ sensor:
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex bypass"
     id: genvex_bypass
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     value_type: U_WORD
     register_type: read
     address: 12
@@ -238,7 +238,7 @@ sensor:
 #    modbus_controller_id: genvex_modbus_controller
 #    name: "Genvex watervalve"
 #    id: genvex_watervalve
-#    unit_of_measurement: "%"
+#    unit_of_measurement: '%'
 #    value_type: U_WORD
 #    register_type: read
 #    address: 105    
@@ -247,7 +247,7 @@ sensor:
 #    modbus_controller_id: genvex_modbus_controller
 #    name: "Genvex humidity fan control"
 #    id: genvex_humidity_fan_control
-#    unit_of_measurement: "%"
+#    unit_of_measurement: '%'
 #    value_type: U_WORD
 #    register_type: read
 #    address: 34
@@ -441,7 +441,7 @@ number:
     icon: mdi:fan-speed-1
     min_value: 0
     max_value: 100
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     register_type: holding
     value_type: U_WORD
     address: 10
@@ -453,7 +453,7 @@ number:
     icon: mdi:fan-speed-2
     min_value: 0
     max_value: 100
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     register_type: holding
     value_type: U_WORD
     address: 11
@@ -465,7 +465,7 @@ number:
     icon: mdi:fan-speed-3
     min_value: 0
     max_value: 100
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     register_type: holding
     value_type: U_WORD
     address: 12
@@ -477,7 +477,7 @@ number:
     icon: mdi:fan-speed-4
     min_value: 0
     max_value: 100
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     register_type: holding
     value_type: U_WORD
     address: 8
@@ -489,7 +489,7 @@ number:
     icon: mdi:fan-speed-1
     min_value: 0
     max_value: 100
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     register_type: holding
     value_type: U_WORD
     address: 13
@@ -501,7 +501,7 @@ number:
     icon: mdi:fan-speed-2
     min_value: 0
     max_value: 100
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     register_type: holding
     value_type: U_WORD
     address: 14
@@ -513,7 +513,7 @@ number:
     icon: mdi:fan-speed-3
     min_value: 0
     max_value: 100
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     register_type: holding
     value_type: U_WORD
     address: 15
@@ -525,7 +525,7 @@ number:
     icon: mdi:fan-speed-4
     min_value: 0
     max_value: 100
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
     register_type: holding
     value_type: U_WORD
     address: 9
@@ -535,7 +535,7 @@ number:
     name: "Genvex Bypass Open Max Temp"
     id: genvex_bypass_open_max_temp
     icon: mdi:thermometer
-    unit_of_measurement: "°C"
+    unit_of_measurement: °C
     min_value: 1
     max_value: 10
     register_type: holding
@@ -554,7 +554,7 @@ number:
     name: "Bypass Close on Low Inlet Temp (Diff From Target Temp)"
     id: bypass_close_on_low_inlet_temp
     icon: mdi:thermometer
-    unit_of_measurement: "°C"
+    unit_of_measurement: °C
     min_value: 0
     max_value: 20
     register_type: holding
