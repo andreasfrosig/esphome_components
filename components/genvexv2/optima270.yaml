@@ -439,139 +439,139 @@ number:
 #    name: "Genvex Step 1 Supply Speed"
 #    id: genvex_step1_supply_speed
 #    icon: mdi:fan-speed-1
-    # min_value: 0
-    # max_value: 100
-    # unit_of_measurement: "%"
-    # register_type: holding
-  #   value_type: U_WORD
-  #   address: 10
+    min_value: 0
+    max_value: 100
+    unit_of_measurement: "%"
+    register_type: holding
+    value_type: U_WORD
+    address: 10
 
-  # - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Genvex Step 2 Supply Speed"
-  #   id: genvex_step2_supply_speed
-  #   icon: mdi:fan-speed-2
-  #   min_value: 0
-  #   max_value: 100
-  #   unit_of_measurement: "%"
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 11
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex Step 2 Supply Speed"
+    id: genvex_step2_supply_speed
+    icon: mdi:fan-speed-2
+    min_value: 0
+    max_value: 100
+    unit_of_measurement: "%"
+    register_type: holding
+    value_type: U_WORD
+    address: 11
 
-  # - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Genvex Step 3 Supply Speed"
-  #   id: genvex_step3_supply_speed
-  #   icon: mdi:fan-speed-3
-  #   min_value: 0
-  #   max_value: 100
-  #   unit_of_measurement: "%"
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 12
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex Step 3 Supply Speed"
+    id: genvex_step3_supply_speed
+    icon: mdi:fan-speed-3
+    min_value: 0
+    max_value: 100
+    unit_of_measurement: "%"
+    register_type: holding
+    value_type: U_WORD
+    address: 12
 
-  # - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Genvex Step 4 Supply Speed"
-  #   id: genvex_step4_supply_speed
-  #   icon: mdi:fan-speed-4
-  #   min_value: 0
-  #   max_value: 100
-  #   unit_of_measurement: "%"
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 8
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex Step 4 Supply Speed"
+    id: genvex_step4_supply_speed
+    icon: mdi:fan-speed-4
+    min_value: 0
+    max_value: 100
+    unit_of_measurement: "%"
+    register_type: holding
+    value_type: U_WORD
+    address: 8
 
-  # - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Genvex Step 1 Extraxt Speed"
-  #   id: genvex_step1_extract_speed
-  #   icon: mdi:fan-speed-1
-  #   min_value: 0
-  #   max_value: 100
-  #   unit_of_measurement: "%"
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 13
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex Step 1 Extraxt Speed"
+    id: genvex_step1_extract_speed
+    icon: mdi:fan-speed-1
+    min_value: 0
+    max_value: 100
+    unit_of_measurement: "%"
+    register_type: holding
+    value_type: U_WORD
+    address: 13
 
-  # - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Genvex Step 2 Extract Speed"
-  #   id: genvex_step2_extract_speed
-  #   icon: mdi:fan-speed-2
-  #   min_value: 0
-  #   max_value: 100
-  #   unit_of_measurement: "%"
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 14
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex Step 2 Extract Speed"
+    id: genvex_step2_extract_speed
+    icon: mdi:fan-speed-2
+    min_value: 0
+    max_value: 100
+    unit_of_measurement: "%"
+    register_type: holding
+    value_type: U_WORD
+    address: 14
 
-  # - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Genvex Step 3 Extract Speed"
-  #   id: genvex_step3_extract_speed
-  #   icon: mdi:fan-speed-3
-  #   min_value: 0
-  #   max_value: 100
-  #   unit_of_measurement: "%"
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 15
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex Step 3 Extract Speed"
+    id: genvex_step3_extract_speed
+    icon: mdi:fan-speed-3
+    min_value: 0
+    max_value: 100
+    unit_of_measurement: "%"
+    register_type: holding
+    value_type: U_WORD
+    address: 15
 
-  #   - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Genvex Step 4 Extract Speed"
-  #   id: genvex_step3_extract_speed
-  #   icon: mdi:fan-speed-4
-  #   min_value: 0
-  #   max_value: 100
-  #   unit_of_measurement: "%"
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 9
+    - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex Step 4 Extract Speed"
+    id: genvex_step3_extract_speed
+    icon: mdi:fan-speed-4
+    min_value: 0
+    max_value: 100
+    unit_of_measurement: "%"
+    register_type: holding
+    value_type: U_WORD
+    address: 9
 
-  # - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Genvex Bypass Open Max Temp"
-  #   id: genvex_bypass_open_max_temp
-  #   icon: mdi:thermometer
-  #   unit_of_measurement: "°C"
-  #   min_value: 1
-  #   max_value: 10
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 18
-  #   step: 0.1
-  #   lambda: "return x/10;"
-  #   write_lambda: |-
-  #     ESP_LOGD("Genvex target temp","Processing new bypass max open temp %d", x);
-  #     uint16_t new_temp = (x * 100)/10;
-  #     ESP_LOGD("Genvex target temp","New value %d", new_temp);
-  #     return new_temp;
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex Bypass Open Max Temp"
+    id: genvex_bypass_open_max_temp
+    icon: mdi:thermometer
+    unit_of_measurement: "°C"
+    min_value: 1
+    max_value: 10
+    register_type: holding
+    value_type: U_WORD
+    address: 18
+    step: 0.1
+    lambda: "return x/10;"
+    write_lambda: |-
+      ESP_LOGD("Genvex target temp","Processing new bypass max open temp %d", x);
+      uint16_t new_temp = (x * 100)/10;
+      ESP_LOGD("Genvex target temp","New value %d", new_temp);
+      return new_temp;
 
-  # - platform: modbus_controller
-  #   modbus_controller_id: genvex_modbus_controller
-  #   name: "Bypass Close on Low Inlet Temp (Diff From Target Temp)"
-  #   id: bypass_close_on_low_inlet_temp
-  #   icon: mdi:thermometer
-  #   unit_of_measurement: "°C"
-  #   min_value: 0
-  #   max_value: 20
-  #   register_type: holding
-  #   value_type: U_WORD
-  #   address: 29
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Bypass Close on Low Inlet Temp (Diff From Target Temp)"
+    id: bypass_close_on_low_inlet_temp
+    icon: mdi:thermometer
+    unit_of_measurement: "°C"
+    min_value: 0
+    max_value: 20
+    register_type: holding
+    value_type: U_WORD
+    address: 29
 
 #
 # Switch
 #
-switch:
-  - platform: modbus_controller
-    modbus_controller_id: genvex_modbus_controller
-    name: "Boost enable"
-    id: boost_enable
-    register_type: holding
-    value_type: U_WORD
-    address: 30
+# switch:
+#  - platform: modbus_controller
+#    modbus_controller_id: genvex_modbus_controller
+#    name: "Boost enable"
+#    id: boost_enable
+#    register_type: holding
+#    value_type: U_WORD
+#    address: 30
 
 #
 # Binary sensors
