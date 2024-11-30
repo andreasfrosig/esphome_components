@@ -620,13 +620,6 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
-    name: "Genvex reheating"
-    id: genvex_reheating
-    register_type: holding
-    address: 3
-
-  - platform: modbus_controller
-    modbus_controller_id: genvex_modbus_controller
     name: "Boost enable"
     id: boost_enable
     register_type: holding
@@ -653,8 +646,8 @@ switch:
     address: 31
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
-    name: "Genvex reheating_set"
+    name: "Genvex reheat"
     register_type: holding
-    id: genvex_reheating_set
+    id: genvex_reheat
     bitmask: 1
     address: 3
