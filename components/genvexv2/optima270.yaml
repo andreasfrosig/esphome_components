@@ -617,7 +617,14 @@ binary_sensor:
     id: genvex_inlet_frostprotection
     register_type: read
     address: 39
-
+    
+  - platform: modbus_controller
+    modbus_controller_id: genvex_modbus_controller
+    name: "Genvex reheating"
+    id: genvex_reheating
+    register_type: holding
+    address: 3
+    
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Boost enable"
