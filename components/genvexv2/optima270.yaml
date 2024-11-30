@@ -655,5 +655,4 @@ switch:
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex reheating_set"
     id: genvex_reheating_set
-    register_type: holding
     address: 3
