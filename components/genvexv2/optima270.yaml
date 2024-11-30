@@ -654,5 +654,6 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: genvex_modbus_controller
     name: "Genvex reheating_set"
+    register_type: coil
     id: genvex_reheating_set
     address: 3
